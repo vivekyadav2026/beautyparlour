@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact Us & Book Appointment | AuraGlow & The Professional Beauty Point</title>
+  <meta name="description" content="Get in touch with The Professional Beauty Point & AuraGlow Beauty Studio. Call +91 98765 43210 or book your appointment online.">
+  
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo-wrapper">
+        <img src="assets/images/logo.jpg" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <span class="brand-title">The Professional</span>
+          <span class="brand-subtitle">BEAUTY POINT & STUDIO</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="bridal.html" class="nav-link">Bridal</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#booking" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-calendar-check"></i> Book Appointment
+        </a>
+      </div>
+
+      <button class="hamburger-btn" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo-wrapper">
+          <img src="assets/images/logo.jpg" alt="Logo" class="logo-img" style="height: 38px;">
+          <div class="brand-text">
+            <span class="brand-title" style="font-size: 1.1rem;">The Professional</span>
+            <span class="brand-subtitle">BEAUTY POINT</span>
+          </div>
+        </div>
+        <button class="mobile-close-btn">&times;</button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-heart"></i> About Us</a>
+        <a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-spa"></i> Services</a>
+        <a href="bridal.html" class="mobile-nav-link"><i class="fa-solid fa-crown"></i> Bridal Studio</a>
+        <a href="gallery.html" class="mobile-nav-link"><i class="fa-solid fa-images"></i> Gallery</a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact Us</a>
+      </nav>
+    </div>
+
+    <div style="margin-top: 24px;">
+      <a href="#booking" class="btn btn-primary btn-full">
+        <i class="fa-solid fa-calendar-check"></i> Book Appointment
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section style="padding-top: 140px; padding-bottom: 40px; background: var(--secondary-beige); text-align: center;">
+    <div class="container">
+      <span class="section-tag">Reach Out To Us</span>
+      <h1 class="section-title">Contact & Appointment Reservation</h1>
+      <p class="section-subtitle">We are here to assist you with salon bookings, bridal consultation queries & directions.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING & CONTACT CONTAINER -->
+  <section id="booking" class="booking-section section-padding">
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-form-card">
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--dark-charcoal); margin-bottom: 20px;">Reserve Your Slot</h3>
+          <form id="appointmentForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" class="form-control" placeholder="e.g. Priya Sharma" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phoneNumber">Phone Number *</label>
+                <input type="tel" id="phoneNumber" class="form-control" placeholder="+91 98765 43210" required>
+              </div>
+
+              <div class="form-group">
+                <label for="emailAddr">Email Address</label>
+                <input type="email" id="emailAddr" class="form-control" placeholder="priya@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="selectService">Select Service *</label>
+                <select id="selectService" class="form-control" required>
+                  <option value="" disabled selected>Choose a service...</option>
+                  <option value="Haircut & Styling">Haircut & Styling (₹499+)</option>
+                  <option value="Hair Spa">Hair Spa (₹999+)</option>
+                  <option value="Hair Color">Hair Color (₹1,499+)</option>
+                  <option value="Facial & Cleanup">Facial & Cleanup (₹799+)</option>
+                  <option value="Waxing">Waxing (₹399+)</option>
+                  <option value="Threading">Threading (₹99+)</option>
+                  <option value="Manicure & Pedicure">Manicure & Pedicure (₹899+)</option>
+                  <option value="Party Makeup">Party Makeup (₹2,499+)</option>
+                  <option value="Bridal Makeup">Bridal Makeup (₹11,999+)</option>
+                  <option value="Nail Care">Nail Care & Extensions (₹599+)</option>
+                  <option value="Skin Treatments">Skin Treatments (₹1,299+)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredDate">Preferred Date *</label>
+                <input type="date" id="preferredDate" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="preferredTime">Preferred Time *</label>
+                <select id="preferredTime" class="form-control" required>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="06:00 PM">06:00 PM</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="bookingMessage">Special Notes / Bridal Consultation Query</label>
+                <textarea id="bookingMessage" class="form-control" rows="3" placeholder="Tell us if you need pre-bridal details or hair extensions..."></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-paper-plane"></i> Confirm & Send WhatsApp
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="booking-info-box">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-details">
+              <h4>Direct Salon Contact</h4>
+              <p>+91 98765 43210<br>+91 98123 45678</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" style="background: #25D366;"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="info-details">
+              <h4>WhatsApp Instant Booking</h4>
+              <p>+91 98765 43210<br>Chat with our beauty desk anytime</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="info-details">
+              <h4>Salon Hours</h4>
+              <p>Monday – Sunday: 10:00 AM – 8:00 PM</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-details">
+              <h4>Address</h4>
+              <p>Plot No. 42, Main Beauty Avenue, Near Central Metro Station, New Delhi, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section-padding" style="background: #FFFFFF;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 24px;">
+        <span class="section-tag">Interactive Map</span>
+        <h2 class="section-title">Find Our Salon Location</h2>
+      </div>
+      <div class="map-card" style="height: 400px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.114827184227!2d77.2090212!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2db961be393%3A0xf6c7670c708f8101!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 AuraGlow Beauty Studio - The Professional Beauty Point. All Rights Reserved.</p>
+        <div style="display: flex; gap: 16px;">
+          <a href="index.html" style="color: #8C847B;">Home</a>
+          <a href="about.html" style="color: #8C847B;">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

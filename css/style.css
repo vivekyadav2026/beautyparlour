@@ -14,26 +14,27 @@
   --muted-rose-dark: #8E3A40;
   --muted-rose-light: #F9EBEA;
   --champagne-gold: #C5A059;
-  --champagne-gold-light: #E8D3A7;
+  --champagne-gold-light: #F7EEDD;
   --champagne-gold-hover: #B08B44;
-  --gold-glow: rgba(197, 160, 89, 0.25);
+  --gold-glow: rgba(197, 160, 89, 0.28);
   --dark-charcoal: #1E1B18;
   --text-dark: #2C2623;
-  --text-muted: #6B625B;
+  --text-muted: #5C544E;
   --border-light: #E8E2D9;
-  --border-gold: rgba(197, 160, 89, 0.4);
+  --border-gold: rgba(197, 160, 89, 0.45);
   
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   
-  --shadow-sm: 0 4px 14px rgba(30, 27, 24, 0.05);
-  --shadow-md: 0 10px 28px rgba(30, 27, 24, 0.08);
-  --shadow-lg: 0 20px 40px rgba(30, 27, 24, 0.12);
-  --shadow-gold: 0 10px 30px rgba(197, 160, 89, 0.3);
+  --shadow-sm: 0 4px 14px rgba(30, 27, 24, 0.06);
+  --shadow-md: 0 10px 28px rgba(30, 27, 24, 0.1);
+  --shadow-lg: 0 20px 44px rgba(30, 27, 24, 0.14);
+  --shadow-gold: 0 10px 28px rgba(197, 160, 89, 0.35);
   
-  --radius-sm: 10px;
-  --radius-md: 18px;
-  --radius-lg: 28px;
+  --radius-sm: 6px;
+  --radius-btn: 8px; /* Modern Crisp Rectangular Radius */
+  --radius-md: 14px;
+  --radius-lg: 24px;
   --radius-full: 9999px;
 
   --transition-fast: 0.2s ease;
@@ -57,7 +58,7 @@ body {
   font-family: var(--font-body);
   background-color: var(--primary-ivory);
   color: var(--text-dark);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -115,22 +116,24 @@ button, input, select, textarea {
 .text-left { text-align: left; }
 
 .section-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--champagne-gold);
-  background: rgba(197, 160, 89, 0.1);
-  padding: 6px 18px;
-  border-radius: var(--radius-full);
+  letter-spacing: 1.8px;
+  color: var(--champagne-gold-hover);
+  background: var(--champagne-gold-light);
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
   margin-bottom: 14px;
-  border: 1px solid rgba(197, 160, 89, 0.25);
+  border: 1px solid rgba(197, 160, 89, 0.35);
 }
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
   font-weight: 700;
   color: var(--dark-charcoal);
   line-height: 1.25;
@@ -145,77 +148,118 @@ button, input, select, textarea {
   font-weight: 400;
 }
 
-/* --- Buttons & CTAs --- */
+/* ==========================================================================
+   SLEEK RECTANGULAR LUXURY BUTTON SYSTEM (MODERN RECTANGULAR EDGE DESIGN)
+   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 32px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: var(--radius-full);
+  gap: 12px;
+  padding: 14px 28px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Executive Rectangular Aesthetic */
+  border-radius: var(--radius-btn); /* 8px Modern Rectangular Radius */
   cursor: pointer;
   border: none;
   transition: var(--transition-normal);
   white-space: nowrap;
   min-height: 50px;
+  box-sizing: border-box;
+  position: relative;
 }
 
+/* Primary Metallic Gold Rectangular Button */
 .btn-primary {
   background: linear-gradient(135deg, #D4AF37 0%, #B08B44 100%);
   color: #FFFFFF;
-  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .btn-primary:hover, .btn-primary:active {
+  background: linear-gradient(135deg, #E2BD45 0%, #9F7B34 100%);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(197, 160, 89, 0.5);
+  box-shadow: 0 10px 26px rgba(197, 160, 89, 0.5);
 }
 
+/* Secondary Rectangular Button */
 .btn-secondary {
   background: #FFFFFF;
   color: var(--dark-charcoal);
-  border: 1px solid var(--border-light);
+  border: 1.5px solid var(--border-light);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover, .btn-secondary:active {
   border-color: var(--champagne-gold);
-  color: var(--champagne-gold);
+  color: var(--champagne-gold-hover);
+  background: var(--primary-ivory);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
+/* Rectangular Gold Accent Button */
 .btn-outline-gold {
-  background: transparent;
-  color: var(--champagne-gold);
-  border: 1.5px solid var(--champagne-gold);
+  background: #FFFFFF;
+  color: #8E6822;
+  border: 2px solid var(--champagne-gold);
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.15);
 }
 
 .btn-outline-gold:hover, .btn-outline-gold:active {
-  background: var(--champagne-gold);
+  background: linear-gradient(135deg, #D4AF37 0%, #B08B44 100%);
   color: #FFFFFF;
+  border-color: var(--champagne-gold-hover);
   transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(197, 160, 89, 0.4);
 }
 
+/* Rose Velvet Rectangular Button */
 .btn-rose {
-  background: var(--muted-rose);
+  background: linear-gradient(135deg, #C86D73 0%, #A44C52 100%);
   color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(200, 109, 115, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-rose:hover, .btn-rose:active {
-  background: #B55C62;
-  box-shadow: 0 8px 24px rgba(200, 109, 115, 0.3);
+  background: linear-gradient(135deg, #D67A80 0%, #8E3A40 100%);
+  box-shadow: 0 10px 26px rgba(200, 109, 115, 0.45);
   transform: translateY(-2px);
 }
 
 .btn-sm {
-  padding: 10px 22px;
-  font-size: 0.9rem;
-  min-height: 42px;
+  padding: 10px 20px;
+  font-size: 0.84rem;
+  min-height: 40px;
+  border-radius: 6px;
 }
 
 .btn-full { width: 100%; }
+
+/* Filter Tabs - Sleek Rectangular Style */
+.filter-btn {
+  padding: 10px 22px;
+  border-radius: var(--radius-btn);
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-light);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: var(--champagne-gold);
+  color: #FFFFFF;
+  border-color: var(--champagne-gold);
+}
 
 /* --- Header Navigation --- */
 .header {
@@ -226,7 +270,7 @@ button, input, select, textarea {
   z-index: 1000;
   transition: var(--transition-normal);
   padding: 14px 0;
-  background: rgba(253, 251, 247, 0.92);
+  background: rgba(253, 251, 247, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(232, 226, 217, 0.6);
 }
@@ -252,7 +296,7 @@ button, input, select, textarea {
 .logo-img {
   height: 46px;
   width: auto;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: var(--shadow-sm);
 }
 
@@ -425,9 +469,7 @@ button, input, select, textarea {
   width: 24px;
 }
 
-/* ==========================================================================
-   HERO BANNER SECTION (MOBILE OPTIMIZED LUXURY HERO)
-   ========================================================================== */
+/* --- Hero Section --- */
 .hero-section {
   position: relative;
   padding-top: 135px;
@@ -458,9 +500,7 @@ button, input, select, textarea {
   }
 }
 
-.hero-content {
-  z-index: 2;
-}
+.hero-content { z-index: 2; }
 
 .hero-badge {
   display: inline-flex;
@@ -469,20 +509,12 @@ button, input, select, textarea {
   background: #FFFFFF;
   color: var(--muted-rose);
   border: 1px solid rgba(200, 109, 115, 0.25);
-  padding: 6px 18px;
-  border-radius: var(--radius-full);
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 20px;
   box-shadow: 0 4px 14px rgba(200, 109, 115, 0.08);
-}
-
-@media (max-width: 576px) {
-  .hero-badge {
-    font-size: 0.78rem;
-    padding: 5px 14px;
-    margin-bottom: 16px;
-  }
 }
 
 .hero-title {
@@ -498,8 +530,6 @@ button, input, select, textarea {
 .hero-title span {
   color: var(--champagne-gold);
   font-style: italic;
-  position: relative;
-  display: inline-block;
 }
 
 .hero-subheading {
@@ -517,12 +547,6 @@ button, input, select, textarea {
   }
 }
 
-@media (max-width: 576px) {
-  .hero-subheading {
-    margin-bottom: 24px;
-  }
-}
-
 .hero-cta-group {
   display: flex;
   align-items: center;
@@ -531,9 +555,7 @@ button, input, select, textarea {
 }
 
 @media (max-width: 992px) {
-  .hero-cta-group {
-    justify-content: center;
-  }
+  .hero-cta-group { justify-content: center; }
 }
 
 @media (max-width: 576px) {
@@ -546,7 +568,6 @@ button, input, select, textarea {
   .hero-cta-group .btn {
     width: 100%;
     min-height: 52px;
-    font-size: 1.02rem;
   }
 }
 
@@ -561,25 +582,21 @@ button, input, select, textarea {
 }
 
 @media (max-width: 992px) {
-  .trust-line {
-    justify-content: center;
-  }
+  .trust-line { justify-content: center; }
 }
 
 @media (max-width: 576px) {
   .trust-line {
     background: #FFFFFF;
     padding: 12px 16px;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-sm);
     justify-content: space-around;
     gap: 8px;
     font-size: 0.78rem;
   }
-  .trust-line span.dot-separator {
-    display: none;
-  }
+  .trust-line span.dot-separator { display: none; }
 }
 
 .trust-icon {
@@ -587,14 +604,11 @@ button, input, select, textarea {
   margin-right: 4px;
 }
 
-/* Mobile Hero Banner Image Presentation */
-.hero-image-wrapper {
-  position: relative;
-}
+.hero-image-wrapper { position: relative; }
 
 .hero-img-card {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: 0 16px 36px rgba(30, 27, 24, 0.12);
   border: 3px solid #FFFFFF;
@@ -609,19 +623,12 @@ button, input, select, textarea {
 }
 
 @media (max-width: 992px) {
-  .hero-img-card img {
-    height: 380px;
-  }
+  .hero-img-card img { height: 380px; }
 }
 
 @media (max-width: 576px) {
-  .hero-img-card {
-    border-radius: 20px;
-    box-shadow: 0 12px 28px rgba(30, 27, 24, 0.1);
-  }
-  .hero-img-card img {
-    height: 290px;
-  }
+  .hero-img-card { border-radius: 12px; }
+  .hero-img-card img { height: 290px; }
 }
 
 .floating-experience-badge {
@@ -629,8 +636,8 @@ button, input, select, textarea {
   bottom: -15px;
   left: -15px;
   background: #FFFFFF;
-  padding: 16px 22px;
-  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  border-radius: var(--radius-btn);
   box-shadow: var(--shadow-md);
   display: flex;
   align-items: center;
@@ -647,7 +654,7 @@ button, input, select, textarea {
     margin: -24px auto 0 auto;
     width: fit-content;
     padding: 10px 18px;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-btn);
     border-left: none;
     border: 1px solid var(--border-gold);
     background: rgba(255, 255, 255, 0.96);
@@ -675,9 +682,7 @@ button, input, select, textarea {
 }
 
 /* --- About Section --- */
-.about-section {
-  background: #FFFFFF;
-}
+.about-section { background: #FFFFFF; }
 
 .about-grid {
   display: grid;
@@ -696,28 +701,49 @@ button, input, select, textarea {
 
 .about-img-box {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  border: 3px solid #FFFFFF;
 }
 
 .about-img-box img {
   width: 100%;
-  height: 420px;
+  height: 440px;
   object-fit: cover;
 }
 
 @media (max-width: 576px) {
-  .about-img-box img {
-    height: 280px;
-  }
+  .about-img-box img { height: 280px; }
 }
 
 .about-content p {
-  font-size: 1rem;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-  line-height: 1.65;
+  font-size: 1.02rem;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+/* About Highlights Checklist */
+.about-highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0 32px 0;
+}
+
+.about-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--dark-charcoal);
+}
+
+.about-highlight-item i {
+  color: var(--champagne-gold);
+  font-size: 1.1rem;
 }
 
 .feature-cards-grid {
@@ -736,7 +762,7 @@ button, input, select, textarea {
 .feature-card {
   background: var(--primary-ivory);
   padding: 28px 20px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-btn);
   border: 1px solid var(--border-light);
   transition: var(--transition-normal);
   text-align: center;
@@ -749,9 +775,9 @@ button, input, select, textarea {
 }
 
 .feature-icon-wrapper {
-  width: 58px;
-  height: 58px;
-  border-radius: var(--radius-full);
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-sm);
   background: rgba(197, 160, 89, 0.12);
   color: var(--champagne-gold);
   display: flex;
@@ -775,9 +801,7 @@ button, input, select, textarea {
 }
 
 /* --- Services Section --- */
-.services-section {
-  background: var(--secondary-beige);
-}
+.services-section { background: var(--secondary-beige); }
 
 .filter-tab-bar {
   display: flex;
@@ -796,28 +820,7 @@ button, input, select, textarea {
     flex-wrap: nowrap;
     margin-bottom: 24px;
   }
-  .filter-btn {
-    flex-shrink: 0;
-  }
-}
-
-.filter-btn {
-  padding: 10px 20px;
-  border-radius: var(--radius-full);
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  cursor: pointer;
-  transition: var(--transition-fast);
-  white-space: nowrap;
-}
-
-.filter-btn.active, .filter-btn:hover {
-  background: var(--champagne-gold);
-  color: #FFFFFF;
-  border-color: var(--champagne-gold);
+  .filter-btn { flex-shrink: 0; }
 }
 
 .services-grid {
@@ -827,14 +830,12 @@ button, input, select, textarea {
 }
 
 @media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+  .services-grid { grid-template-columns: 1fr; }
 }
 
 .service-card {
   background: #FFFFFF;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-btn);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-light);
@@ -856,9 +857,7 @@ button, input, select, textarea {
 }
 
 @media (max-width: 480px) {
-  .service-img-wrapper {
-    height: 180px;
-  }
+  .service-img-wrapper { height: 180px; }
 }
 
 .service-img-wrapper img {
@@ -868,9 +867,7 @@ button, input, select, textarea {
   transition: transform 0.5s ease;
 }
 
-.service-card:hover .service-img-wrapper img {
-  transform: scale(1.06);
-}
+.service-card:hover .service-img-wrapper img { transform: scale(1.06); }
 
 .service-tag-badge {
   position: absolute;
@@ -882,7 +879,7 @@ button, input, select, textarea {
   font-size: 0.72rem;
   font-weight: 600;
   padding: 4px 10px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
 }
 
 .service-content {
@@ -958,7 +955,7 @@ button, input, select, textarea {
 
 .bridal-img-wrapper {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
   border: 2px solid var(--champagne-gold);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
@@ -971,18 +968,11 @@ button, input, select, textarea {
 }
 
 @media (max-width: 576px) {
-  .bridal-img-wrapper img {
-    height: 320px;
-  }
+  .bridal-img-wrapper img { height: 320px; }
 }
 
-.bridal-content .section-title {
-  color: #FFFFFF;
-}
-
-.bridal-content .section-subtitle {
-  color: #D1C7BD;
-}
+.bridal-content .section-title { color: #FFFFFF; }
+.bridal-content .section-subtitle { color: #D1C7BD; }
 
 .bridal-list {
   display: grid;
@@ -992,9 +982,7 @@ button, input, select, textarea {
 }
 
 @media (max-width: 480px) {
-  .bridal-list {
-    grid-template-columns: 1fr;
-  }
+  .bridal-list { grid-template-columns: 1fr; }
 }
 
 .bridal-item {
@@ -1014,7 +1002,7 @@ button, input, select, textarea {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(197, 160, 89, 0.35);
   backdrop-filter: blur(12px);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-btn);
   padding: 24px;
   margin-top: 24px;
 }
@@ -1040,13 +1028,11 @@ button, input, select, textarea {
   font-size: 0.72rem;
   font-weight: 700;
   padding: 4px 12px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
 }
 
 /* --- Packages Section --- */
-.packages-section {
-  background: var(--primary-ivory);
-}
+.packages-section { background: var(--primary-ivory); }
 
 .packages-grid {
   display: grid;
@@ -1055,14 +1041,12 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-  .packages-grid {
-    grid-template-columns: 1fr;
-  }
+  .packages-grid { grid-template-columns: 1fr; }
 }
 
 .package-card {
   background: #FFFFFF;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-btn);
   padding: 32px 24px;
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
@@ -1079,9 +1063,7 @@ button, input, select, textarea {
 }
 
 @media (max-width: 992px) {
-  .package-card.featured {
-    transform: none;
-  }
+  .package-card.featured { transform: none; }
 }
 
 .package-card:hover {
@@ -1098,7 +1080,7 @@ button, input, select, textarea {
   font-size: 0.75rem;
   font-weight: 700;
   padding: 4px 12px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
 }
 
 .package-name {
@@ -1143,14 +1125,10 @@ button, input, select, textarea {
   color: var(--text-dark);
 }
 
-.package-feature-item i {
-  color: var(--champagne-gold);
-}
+.package-feature-item i { color: var(--champagne-gold); }
 
 /* --- Gallery Section --- */
-.gallery-section {
-  background: var(--secondary-beige);
-}
+.gallery-section { background: var(--secondary-beige); }
 
 .gallery-grid {
   display: grid;
@@ -1159,14 +1137,12 @@ button, input, select, textarea {
 }
 
 @media (max-width: 576px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+  .gallery-grid { grid-template-columns: 1fr; }
 }
 
 .gallery-item {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-btn);
   overflow: hidden;
   height: 260px;
   cursor: pointer;
@@ -1200,13 +1176,8 @@ button, input, select, textarea {
   }
 }
 
-.gallery-item:hover img {
-  transform: scale(1.06);
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item:hover .gallery-overlay { opacity: 1; }
 
 .gallery-cat {
   font-size: 0.72rem;
@@ -1237,10 +1208,7 @@ button, input, select, textarea {
   padding: 16px;
 }
 
-.lightbox-modal.active {
-  opacity: 1;
-  visibility: visible;
-}
+.lightbox-modal.active { opacity: 1; visibility: visible; }
 
 .lightbox-content {
   position: relative;
@@ -1280,9 +1248,7 @@ button, input, select, textarea {
 }
 
 /* --- Testimonials Section --- */
-.testimonials-section {
-  background: #FFFFFF;
-}
+.testimonials-section { background: #FFFFFF; }
 
 .testimonials-grid {
   display: grid;
@@ -1291,15 +1257,13 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
+  .testimonials-grid { grid-template-columns: 1fr; }
 }
 
 .testimonial-card {
   background: var(--primary-ivory);
   padding: 28px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-btn);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -1332,7 +1296,7 @@ button, input, select, textarea {
 .client-avatar {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   background: var(--champagne-gold);
   color: #FFFFFF;
   display: flex;
@@ -1355,9 +1319,7 @@ button, input, select, textarea {
 }
 
 /* --- Why Choose Us Section --- */
-.why-section {
-  background: var(--secondary-beige);
-}
+.why-section { background: var(--secondary-beige); }
 
 .why-grid {
   display: grid;
@@ -1373,15 +1335,13 @@ button, input, select, textarea {
 }
 
 @media (max-width: 360px) {
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
+  .why-grid { grid-template-columns: 1fr; }
 }
 
 .why-card {
   background: #FFFFFF;
   padding: 24px 16px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-btn);
   border: 1px solid var(--border-light);
   text-align: center;
   transition: var(--transition-normal);
@@ -1396,7 +1356,7 @@ button, input, select, textarea {
 .why-icon {
   width: 50px;
   height: 50px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   background: rgba(197, 160, 89, 0.12);
   color: var(--champagne-gold);
   display: flex;
@@ -1413,9 +1373,7 @@ button, input, select, textarea {
   color: var(--dark-charcoal);
 }
 
-/* ==========================================================================
-   SPECIAL OFFER BANNER (PREMIUM MOBILE CARD DESIGN)
-   ========================================================================== */
+/* SPECIAL OFFER BANNER */
 .offer-banner-section {
   background: linear-gradient(135deg, #A44C52 0%, #6E2228 100%);
   color: #FFFFFF;
@@ -1426,23 +1384,11 @@ button, input, select, textarea {
   border-bottom: 1px solid rgba(232, 211, 167, 0.3);
 }
 
-.offer-banner-section::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(232, 211, 167, 0.25) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .offer-card-wrapper {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-btn);
   padding: 36px 40px;
   display: flex;
   align-items: center;
@@ -1477,7 +1423,7 @@ button, input, select, textarea {
   background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #B08B44 100%);
   color: #1E1B18;
   padding: 16px 24px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-weight: 700;
   text-align: center;
@@ -1487,16 +1433,8 @@ button, input, select, textarea {
   flex-shrink: 0;
 }
 
-.offer-discount-badge .discount-num {
-  font-size: 2.2rem;
-  line-height: 1;
-}
-
-.offer-discount-badge .discount-txt {
-  font-size: 0.75rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
+.offer-discount-badge .discount-num { font-size: 2.2rem; line-height: 1; }
+.offer-discount-badge .discount-txt { font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase; }
 
 .offer-details h2 {
   font-family: var(--font-heading);
@@ -1512,10 +1450,7 @@ button, input, select, textarea {
   margin-bottom: 6px;
 }
 
-.offer-tnc {
-  font-size: 0.78rem;
-  opacity: 0.8;
-}
+.offer-tnc { font-size: 0.78rem; opacity: 0.8; }
 
 .offer-action-btn {
   background: #FFFFFF;
@@ -1532,15 +1467,11 @@ button, input, select, textarea {
 }
 
 @media (max-width: 576px) {
-  .offer-action-btn {
-    width: 100%;
-  }
+  .offer-action-btn { width: 100%; }
 }
 
 /* --- Booking Section --- */
-.booking-section {
-  background: var(--primary-ivory);
-}
+.booking-section { background: var(--primary-ivory); }
 
 .booking-grid {
   display: grid;
@@ -1559,15 +1490,13 @@ button, input, select, textarea {
 .booking-form-card {
   background: #FFFFFF;
   padding: 36px 28px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-btn);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 576px) {
-  .booking-form-card {
-    padding: 24px 16px;
-  }
+  .booking-form-card { padding: 24px 16px; }
 }
 
 .form-grid {
@@ -1577,9 +1506,7 @@ button, input, select, textarea {
 }
 
 @media (max-width: 600px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
+  .form-grid { grid-template-columns: 1fr; }
 }
 
 .form-group {
@@ -1588,9 +1515,7 @@ button, input, select, textarea {
   gap: 6px;
 }
 
-.form-group.full-width {
-  grid-column: 1 / -1;
-}
+.form-group.full-width { grid-column: 1 / -1; }
 
 .form-group label {
   font-size: 0.88rem;
@@ -1618,7 +1543,7 @@ button, input, select, textarea {
 .booking-info-box {
   background: var(--secondary-beige);
   padding: 36px 28px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-btn);
   border: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
@@ -1626,9 +1551,7 @@ button, input, select, textarea {
 }
 
 @media (max-width: 576px) {
-  .booking-info-box {
-    padding: 24px 16px;
-  }
+  .booking-info-box { padding: 24px 16px; }
 }
 
 .info-item {
@@ -1640,7 +1563,7 @@ button, input, select, textarea {
 .info-icon {
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   background: var(--champagne-gold);
   color: #FFFFFF;
   display: flex;
@@ -1664,9 +1587,7 @@ button, input, select, textarea {
 }
 
 /* --- Contact & Location Section --- */
-.contact-section {
-  background: #FFFFFF;
-}
+.contact-section { background: #FFFFFF; }
 
 .contact-grid {
   display: grid;
@@ -1676,23 +1597,19 @@ button, input, select, textarea {
 }
 
 @media (max-width: 992px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+  .contact-grid { grid-template-columns: 1fr; }
 }
 
 .map-card {
   height: 360px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-btn);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-light);
 }
 
 @media (max-width: 576px) {
-  .map-card {
-    height: 280px;
-  }
+  .map-card { height: 280px; }
 }
 
 .map-card iframe {
@@ -1709,12 +1626,8 @@ button, input, select, textarea {
 }
 
 @media (max-width: 480px) {
-  .contact-action-btns {
-    flex-direction: column;
-  }
-  .contact-action-btns .btn {
-    width: 100%;
-  }
+  .contact-action-btns { flex-direction: column; }
+  .contact-action-btns .btn { width: 100%; }
 }
 
 /* --- Footer --- */
@@ -1734,9 +1647,7 @@ button, input, select, textarea {
 }
 
 @media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 576px) {
@@ -1791,7 +1702,7 @@ button, input, select, textarea {
 .social-icon {
   width: 38px;
   height: 38px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   background: rgba(255, 255, 255, 0.08);
   color: #FFFFFF;
   display: flex;
@@ -1836,9 +1747,9 @@ button, input, select, textarea {
 }
 
 .whatsapp-float {
-  width: 54px;
-  height: 54px;
-  border-radius: var(--radius-full);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-btn);
   background: #25D366;
   color: #FFFFFF;
   display: flex;
@@ -1850,16 +1761,14 @@ button, input, select, textarea {
   position: relative;
 }
 
-.whatsapp-float:hover, .whatsapp-float:active {
-  transform: scale(1.08);
-}
+.whatsapp-float:hover, .whatsapp-float:active { transform: scale(1.08); }
 
 .whatsapp-status-dot {
   position: absolute;
   top: 2px;
   right: 2px;
-  width: 13px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   background: #4ADE80;
   border: 2px solid #FFFFFF;
   border-radius: 50%;
@@ -1868,7 +1777,7 @@ button, input, select, textarea {
 .back-to-top {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-btn);
   background: #FFFFFF;
   color: var(--dark-charcoal);
   border: 1px solid var(--border-light);
@@ -1883,10 +1792,7 @@ button, input, select, textarea {
   transition: var(--transition-normal);
 }
 
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
+.back-to-top.visible { opacity: 1; visibility: visible; }
 
 .back-to-top:hover, .back-to-top:active {
   background: var(--champagne-gold);
@@ -1903,7 +1809,7 @@ button, input, select, textarea {
   background: #FFFFFF;
   border-left: 4px solid var(--champagne-gold);
   padding: 14px 20px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg);
   z-index: 3000;
   display: flex;

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Services & Price List | AuraGlow & The Professional Beauty Point</title>
+  <meta name="description" content="Explore our complete menu of beauty treatments, facials, hair spa, party makeup, and nail art pricing at The Professional Beauty Point.">
+  
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo-wrapper">
+        <img src="assets/images/logo.jpg" alt="Logo" class="logo-img">
+        <div class="brand-text">
+          <span class="brand-title">The Professional</span>
+          <span class="brand-subtitle">BEAUTY POINT & STUDIO</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="bridal.html" class="nav-link">Bridal</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="contact.html#booking" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-calendar-check"></i> Book Appointment
+        </a>
+      </div>
+
+      <button class="hamburger-btn" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="brand-logo-wrapper">
+          <img src="assets/images/logo.jpg" alt="Logo" class="logo-img" style="height: 38px;">
+          <div class="brand-text">
+            <span class="brand-title" style="font-size: 1.1rem;">The Professional</span>
+            <span class="brand-subtitle">BEAUTY POINT</span>
+          </div>
+        </div>
+        <button class="mobile-close-btn">&times;</button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-heart"></i> About Us</a>
+        <a href="services.html" class="mobile-nav-link"><i class="fa-solid fa-spa"></i> Services</a>
+        <a href="bridal.html" class="mobile-nav-link"><i class="fa-solid fa-crown"></i> Bridal Studio</a>
+        <a href="gallery.html" class="mobile-nav-link"><i class="fa-solid fa-images"></i> Gallery</a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Contact Us</a>
+      </nav>
+    </div>
+
+    <div style="margin-top: 24px;">
+      <a href="contact.html#booking" class="btn btn-primary btn-full">
+        <i class="fa-solid fa-calendar-check"></i> Book Appointment
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section style="padding-top: 140px; padding-bottom: 40px; background: var(--secondary-beige); text-align: center;">
+    <div class="container">
+      <span class="section-tag">Complete Price Guide</span>
+      <h1 class="section-title">Our Services & Treatments</h1>
+      <p class="section-subtitle">Discover transparent pricing and customized beauty pampering for every occasion.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES CONTAINER -->
+  <section class="services-section section-padding">
+    <div class="container text-center">
+      <div class="filter-tab-bar">
+        <button class="filter-btn active" data-filter="all">All Services</button>
+        <button class="filter-btn" data-filter="hair">Hair Care</button>
+        <button class="filter-btn" data-filter="skin">Skin & Facials</button>
+        <button class="filter-btn" data-filter="makeup">Makeup & Nails</button>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Cards -->
+        <div class="service-card" data-category="hair">
+          <div class="service-img-wrapper"><img src="assets/images/service-hair.jpg" alt="Haircut"><span class="service-tag-badge">Hair</span></div>
+          <div class="service-content">
+            <h3 class="service-title">Haircut & Styling</h3>
+            <p class="service-desc">Precision haircut, shampoo wash, blow-dry and serum finish. (Duration: 45 mins)</p>
+            <div class="service-footer">
+              <div class="service-price"><span class="price-label">Starting From</span><span class="price-val">₹499</span></div>
+              <a href="contact.html#booking" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="hair">
+          <div class="service-img-wrapper"><img src="assets/images/service-hair.jpg" alt="Hair Spa"><span class="service-tag-badge">Hair</span></div>
+          <div class="service-content">
+            <h3 class="service-title">L'Oréal Nourishing Hair Spa</h3>
+            <p class="service-desc">Intense moisture hair spa, micro-steam & scalp massage. (Duration: 60 mins)</p>
+            <div class="service-footer">
+              <div class="service-price"><span class="price-label">Starting From</span><span class="price-val">₹999</span></div>
+              <a href="contact.html#booking" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="skin">
+          <div class="service-img-wrapper"><img src="assets/images/service-facial.jpg" alt="Gold Facial"><span class="service-tag-badge">Skin</span></div>
+          <div class="service-content">
+            <h3 class="service-title">24K Gold Radiance Facial</h3>
+            <p class="service-desc">Pore deep cleansing, herbal gold scrub, steam & 24K gold foil mask. (Duration: 75 mins)</p>
+            <div class="service-footer">
+              <div class="service-price"><span class="price-label">Starting From</span><span class="price-val">₹799</span></div>
+              <a href="contact.html#booking" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="makeup">
+          <div class="service-img-wrapper"><img src="assets/images/service-makeup.jpg" alt="Party Makeup"><span class="service-tag-badge">Makeup</span></div>
+          <div class="service-content">
+            <h3 class="service-title">HD Signature Party Makeup</h3>
+            <p class="service-desc">Long-lasting HD makeup, false lashes, contouring & hair styling. (Duration: 90 mins)</p>
+            <div class="service-footer">
+              <div class="service-price"><span class="price-label">Starting From</span><span class="price-val">₹2,499</span></div>
+              <a href="contact.html#booking" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-category="makeup">
+          <div class="service-img-wrapper"><img src="assets/images/service-nails.jpg" alt="Gel Nail Art"><span class="service-tag-badge">Nails</span></div>
+          <div class="service-content">
+            <h3 class="service-title">Gel Extensions & Art</h3>
+            <p class="service-desc">Acrylic gel nail extensions, chrome art & glitter polish. (Duration: 60 mins)</p>
+            <div class="service-footer">
+              <div class="service-price"><span class="price-label">Starting From</span><span class="price-val">₹599</span></div>
+              <a href="contact.html#booking" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 AuraGlow Beauty Studio - The Professional Beauty Point. All Rights Reserved.</p>
+        <div style="display: flex; gap: 16px;">
+          <a href="index.html" style="color: #8C847B;">Home</a>
+          <a href="contact.html" style="color: #8C847B;">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
